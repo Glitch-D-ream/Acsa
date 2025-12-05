@@ -31,7 +31,7 @@ jobs:
       - name: Build APK with Buildozer
         run: |
           # O Buildozer irá baixar o Android SDK/NDK e compilar o APK
-          buildozer android debug
+          buildozer -v android debug
 
       - name: Upload APK as artifact
         uses: actions/upload-artifact@v4
