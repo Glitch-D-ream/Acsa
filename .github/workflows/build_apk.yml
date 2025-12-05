@@ -25,6 +25,8 @@ jobs:
           # Instalar dependências adicionais do Buildozer no Ubuntu
           sudo apt-get update
           sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev cmake libffi-dev libssl-dev
+          # Aceitar licenças do Android SDK
+          yes | buildozer android update
 
       - name: Build APK with Buildozer
         run: |
